@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GSF-pw-EBL">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Fruit Detector-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CameraViewController" customModule="FruitDetectorApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5O-8B-QqM">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Lpm-NK-WvJ">
+                                        <rect key="frame" x="16" y="577" width="343" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5c-rL-lzo">
+                                                <rect key="frame" x="0.0" y="0.0" width="163.5" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Fun Fact">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="cropClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="naI-n4-LVe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYh-8w-dcm">
+                                                <rect key="frame" x="179.5" y="0.0" width="163.5" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Search Web">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="searchWeb:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GZD-NV-Quy"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Lpm-NK-WvJ" secondAttribute="bottom" constant="16" id="BoC-Ge-JM9"/>
+                                    <constraint firstItem="Lpm-NK-WvJ" firstAttribute="leading" secondItem="E5O-8B-QqM" secondAttribute="leading" constant="16" id="YZI-cS-5Is"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lpm-NK-WvJ" secondAttribute="trailing" constant="16" id="cBg-kU-OQD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="E5O-8B-QqM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="D5N-uZ-iCJ"/>
+                            <constraint firstItem="E5O-8B-QqM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="L0L-PE-TIz"/>
+                            <constraint firstItem="E5O-8B-QqM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cBg-os-MjP"/>
+                            <constraint firstItem="E5O-8B-QqM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gzI-Db-f1Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Fruit Detector" id="4TI-xR-RYS"/>
+                    <connections>
+                        <outlet property="cropClickButton" destination="e5c-rL-lzo" id="FCB-G2-Kue"/>
+                        <outlet property="previewView" destination="E5O-8B-QqM" id="Bnd-sH-rhv"/>
+                        <outlet property="searchWebButton" destination="fYh-8w-dcm" id="Hqt-x5-Gk1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="76.911544227886068"/>
+        </scene>
+        <!--Fruit Info View Controller-->
+        <scene sceneID="yIR-yi-1Xz">
+            <objects>
+                <viewController storyboardIdentifier="FruitInfoImageViewController" id="Gub-K3-ECp" customClass="FruitInfoViewController" customModule="FruitDetectorApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mTZ-0s-XS9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="En2-5b-Lu2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="En2-5b-Lu2" firstAttribute="leading" secondItem="rtj-IY-L3p" secondAttribute="leading" id="6Ma-XM-aKM"/>
+                            <constraint firstItem="En2-5b-Lu2" firstAttribute="bottom" secondItem="rtj-IY-L3p" secondAttribute="bottom" id="B0A-MA-yNx"/>
+                            <constraint firstItem="En2-5b-Lu2" firstAttribute="top" secondItem="rtj-IY-L3p" secondAttribute="top" id="Ho0-Aa-r4M"/>
+                            <constraint firstItem="En2-5b-Lu2" firstAttribute="trailing" secondItem="rtj-IY-L3p" secondAttribute="trailing" id="K6T-T0-grH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rtj-IY-L3p"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wca-Op-46a"/>
+                    <connections>
+                        <outlet property="tableView" destination="En2-5b-Lu2" id="kg3-9q-NMm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fji-dx-fRX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1860" y="77.811094452773617"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="t83-gA-Miz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GSF-pw-EBL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xlj-Ea-jg7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="PmT-DY-Ywn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uJD-Ie-yWN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="76.911544227886068"/>
+        </scene>
+    </scenes>
+</document>
